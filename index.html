@@ -54,7 +54,7 @@
               </div>
         </section>
     </header>
-    <main>
+    <main><div>
         <section class="p-10">
             <h1 class="font-semibold text-3xl mb-5 font-sans">Kitchenware</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5">
@@ -66,7 +66,7 @@
                     
                     <div class="badge badge-secondary bg-green-800 border-none">NEW</div>
                   </h2>
-                  <p class="font-semibold">39.00 TK</p>
+                  <p id="paisa-dedo" class="font-semibold">39.00 TK</p>
                   <div class="rating mt-0">
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" checked/>
@@ -74,7 +74,7 @@
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                   </div>
-                  <button class="btn btn-active btn-accent bg-yellow-700 border-none m-5 w-1/2 text-white text-xl">Buy Now</button>
+                  <button onclick="calculateKAccessories()" id=""class="btn btn-active btn-accent bg-yellow-700 border-none m-5 w-1/2 text-white text-xl">Buy Now</button>
                   <div class="card-actions justify-end">
                     <div class="badge badge-outline">Kitchenware</div> 
                   </div>
@@ -84,11 +84,11 @@
                 <figure><img src="images/prod2.png" alt="Shoes" class="mt-10" /></figure>
                 <div class="card-body">
                   <h2 class="card-title">
-                    K. Accessories
+                    K. Boards
                     
                     <div class="badge badge-secondary bg-green-800 border-none">NEW</div>
                   </h2>
-                  <p class="font-semibold">25.00 TK</p>
+                  <p id="paisa-for-board" class="font-semibold">25.00 TK</p>
                   <div class="rating mt-0">
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500"checked/>
@@ -96,7 +96,7 @@
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                   </div>
-                  <button class="btn btn-active btn-accent bg-yellow-700 border-none m-5 w-1/2 text-white text-xl">Buy Now</button>
+                  <button onclick="calculateKBoards()" class="btn btn-active btn-accent bg-yellow-700 border-none m-5 w-1/2 text-white text-xl">Buy Now</button>
                   <div class="card-actions justify-end">
                     <div class="badge badge-outline">Kitchenware</div> 
                   </div>
@@ -110,7 +110,7 @@
                     
                     <div class="badge badge-secondary bg-green-800 border-none">NEW</div>
                   </h2>
-                  <p class="font-semibold">40.00 TK</p>
+                  <p id="paisa-for-cooker" class="font-semibold">40.00 TK</p>
                   <div class="rating mt-0">
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500"  />
@@ -118,7 +118,7 @@
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                   </div>
-                  <button class="btn btn-active btn-accent bg-yellow-700 border-none m-5 w-1/2 text-white text-xl">Buy Now</button>
+                  <button onclick="calculateKCooker()" class="btn btn-active btn-accent bg-yellow-700 border-none m-5 w-1/2 text-white text-xl">Buy Now</button>
                   <div class="card-actions justify-end">
                     <div class="badge badge-outline">Kitchenware</div> 
                   </div>
@@ -267,6 +267,19 @@
               </div>
 
         </section>
+        
+    </div>
+
     </main>
+
+    <!-- Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <h2>Congratulations</h2>
+            <p>Your Purchase the product</p>
+            <button id="closeModalButton" class="btn promo-code-btn text-white mt-3">Go Home</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
