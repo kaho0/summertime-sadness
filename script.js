@@ -17,3 +17,9 @@ function getInputValue(fieldId){
     const value=parseFloat(inputValueText);
     return value;
 }
+// function sumOfClicked(fieldId,value){
+//     const inputedValue=document.getElementById(fieldId);
+//     let sum=0;
+//     const totalPrice=sum+value;
+//     return totalPrice;
+// }
